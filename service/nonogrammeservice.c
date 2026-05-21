@@ -4,7 +4,6 @@
 
 #include "nonogrammeservice.h"
 
-#include <stdio.h>
 
 unsigned char isNonogramBlackRowEqualsBlackColumn(const Nonogram *nonogram) {
     return 0;
