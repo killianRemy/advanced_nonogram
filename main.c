@@ -12,7 +12,9 @@ int main(void) {
 
     printf("\n\n");
 
-    printf("\n %d",isNonogramEachConstraintsLessOrEqualsThanDimension(nonogram));
+    for (unsigned char i = 0; i < nonogramGetHeight(nonogram);i++) {
+        printf("%d\n", isNonogramRowCorrectlyFilled(nonogram, i));
+    }
 
     deleteNonogram(nonogram);
 

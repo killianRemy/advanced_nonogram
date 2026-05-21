@@ -4,6 +4,7 @@
 
 #include "nonogrammeservice.h"
 
+#include <stdio.h>
 #include <stdlib.h>
 
 unsigned char isNonogramBlackRowEqualsBlackColumn(const Nonogram *nonogram) {
@@ -77,7 +78,60 @@ isNonogramEachConstraintsLessOrEqualsThanDimension(const Nonogram *nonogram) {
   return 1;
 }
 
-unsigned char
-isNonogramConstraintsCountEqualsDimension(const Nonogram *nonogram) {
-  return 0;
+unsigned char isNonogramConstraintsCountEqualsDimension(const Nonogram *nonogram) {
+  if (nonogram == NULL) return 0;
+
+  const unsigned char width = nonogramGetWidth(nonogram);
+  const unsigned char height = nonogramGetHeight(nonogram);
+
+  for (unsigned char constraintsIndex = 0; constraintsIndex < height; constraintsIndex++) {
+    const unsigned char constraintSize = nonogramRowsConstraintsGetSize(nonogram, constraintsIndex);
+    unsigned char *constraintArray = nonogramRowsConstraintsToArray(nonogram, constraintsIndex);
+
+    for (unsigned char constraintIndex = 0; constraintIndex < constraintSize; constraintIndex++) {
+      if ((constraintSize > 1) && (constraintArray[constraintIndex]) == 0) {
+        free(constraintArray);
+        return 0;
+      }
+    }
+
+    free(constraintArray);
+  }
+
+  for (unsigned char constraintsIndex = 0; constraintsIndex < width; constraintsIndex++) {
+    const unsigned char constraintSize = nonogramColumnsConstraintsGetSize(nonogram, constraintsIndex);
+    unsigned char columnsSizeMin = constraintSize;
+    unsigned char *constraintArray = nonogramColumnsConstraintsToArray(nonogram, constraintsIndex);
+
+    for (unsigned char constraintIndex = 0; constraintIndex < constraintSize; constraintIndex++) {
+      if ((constraintSize > 1) && (constraintArray[constraintIndex]) == 0)
+        return 0;
+    }
+
+    free(constraintArray);
+  }
+
+  return 1;
+}
+
+// Return 1 if true, else 0
+unsigned char isNonogramRowCorrectlyFilled(const Nonogram *nonogram, unsigned char index) {
+  if (nonogram==NULL) return 0;
+  if (nonogramGetHeight(nonogram)<= index) return 0;
+
+  const unsigned char constraintSize=nonogramRowsConstraintsGetSize(nonogram,index);
+  const unsigned char* constraintArray=nonogramRowsConstraintsToArray(nonogram,index);
+
+  unsigned char blackCount=0;
+
+  for (unsigned char i=0; i<constraintSize;i++) {
+    printf("%d(%d) ",constraintArray[i],i);
+  }
+
+  free(constraintArray);
+}
+
+unsigned char isNonogramAllColumnsCorrectlyFilled(const Nonogram *nonogram) {
+  if (nonogram == NULL) return 0;
+
 }

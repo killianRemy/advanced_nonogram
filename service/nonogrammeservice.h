@@ -9,7 +9,7 @@
 
 unsigned char isNonogramBlackRowEqualsBlackColumn(const Nonogram* nonogram);
 unsigned char isNonogramEachConstraintsLessOrEqualsThanDimension(const Nonogram* nonogram);
-unsigned char isNonogramConstraintsCountEqualsDimension(const Nonogram* nonogram);
+unsigned char isNonogramAllConstraintsContainsOneZeroOrNone(const Nonogram *nonogram);
 
 // Return 1 if true, else 0
 unsigned char isNonogramRowCorrectlyFilled(const Nonogram *nonogram, unsigned char index);
@@ -24,3 +24,4 @@ unsigned char isNonogramAllColumnsCorrectlyFilled(const Nonogram *nonogram);
 char isNonogramCorrectlyFilled(const Nonogram *nonogram);
 
 #endif //NONOGRAMME_NONOGRAMMESERVICE_H
+
