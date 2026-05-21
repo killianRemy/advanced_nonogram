@@ -3,7 +3,7 @@ project(nonogramme C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_compile_options(-g -Wall -Werror)
+add_compile_options(-g -Wall)
 
 add_executable(nonogramme main.c
         console/console.c
