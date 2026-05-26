@@ -10,27 +10,29 @@ void deleteGridSolver(GridSolver solver, const unsigned char width,
   return;
 }
 
-void fillAllVerifiables(GridSolver solver, const unsigned char width,
+void fillAllVerifiables(Nonogram *nonogram,GridSolver solver, const unsigned char width,
                         const unsigned char height) {
   return;
 }
 
-void fillAllVerifiableRows(GridSolver solver, const unsigned char width,
+void fillAllVerifiableRows(Nonogram *nonogram,GridSolver solver, const unsigned char width,
                            const unsigned char height) {
   return;
 }
 
-void fillAllVerifiableColumns(GridSolver solver, const unsigned char width,
+void fillAllVerifiableColumns(Nonogram *nonogram,GridSolver solver, const unsigned char width,
                               const unsigned char height) {
-  return;
+  return; //TODO here too
 }
 
-void fillAllVerifiableRow(GridSolver solver, const unsigned char width,
+void fillAllVerifiableRow(Nonogram *nonogram, GridSolver solver, const unsigned char width,
                           const unsigned char rowIndex) {
   return;
 }
 
-void fillAllVerifiableColumn(GridSolver solver, const unsigned char colIndex,
+void fillAllVerifiableColumn(Nonogram *nonogram,GridSolver solver, const unsigned char columnIndex,
                           const unsigned char height) {
-  return;
+  for (unsigned char i=0;i<height;i++) {
+
+  }
 }

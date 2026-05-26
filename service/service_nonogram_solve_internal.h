@@ -13,19 +13,21 @@ GridSolver createGridSolver(const unsigned char width,
 void deleteGridSolver(GridSolver solver, const unsigned char width,
                       const unsigned char height);
 
-void fillAllVerifiables(GridSolver solver, const unsigned char width,
+void fillAllVerifiables(Nonogram *nonogram,GridSolver solver, const unsigned char width,
                         const unsigned char height);
 
-void fillAllVerifiableRows(GridSolver solver, const unsigned char width,
+void fillAllVerifiableRows(Nonogram *nonogram,GridSolver solver, const unsigned char width,
                            const unsigned char height);
 
-void fillAllVerifiableColumns(GridSolver solver, const unsigned char width,
+void fillAllVerifiableColumns(Nonogram *nonogram,GridSolver solver, const unsigned char width,
                               const unsigned char height);
+//TODO here too
 
-void fillAllVerifiableRow(GridSolver solver, const unsigned char width,
+void fillAllVerifiableRow(Nonogram *nonogram,GridSolver solver, const unsigned char width,
                           const unsigned char rowIndex);
 
-void fillAllVerifiableColumn(GridSolver solver, const unsigned char colIndex,
+void fillAllVerifiableColumn(Nonogram *nonogram,GridSolver solver, const unsigned char columnIndex,
                           const unsigned char height);
+//TODO here
 
 #endif // __SOLVE_INT_H
