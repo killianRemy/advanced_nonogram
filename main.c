@@ -4,7 +4,6 @@
 #include "console/console.h"
 #include "service/service_correctly_filed.h"
 #include "service/service_nonogram_valid.h"
-#include "service/service_nonogram_solve_internal.h"
 
 int main(void) {
 	Nonogram *nonogram = loadNonogramFromFile("../doc/6-empty.nono");
