@@ -2,7 +2,7 @@
 // Created by JAD on 18/05/2026.
 //
 
-#include "../service/service_nonogramme_valid.h"
+#include "../service/service_nonogram_valid.h"
 
 unsigned char isNonogramBlackRowsEqualsBlackColumn(const Nonogram *nonogram) {
   unsigned char blackRowsCount = 0;

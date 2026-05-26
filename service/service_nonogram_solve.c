@@ -1,6 +1,6 @@
-#include "nonogramme_solve.h"
+#include "service_nonogram_solve.h"
 #include "service_correctly_filed.h"
-#include "service_nonogramme_valid.h"
+#include "service_nonogram_valid.h"
 
 int nonogramSolve(Nonogram *nono) {
   if (!nono || !isNonogramValid(nono) || !isNonogramCorrectlyFilled(nono))

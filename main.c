@@ -3,7 +3,7 @@
 #include "repository/nonogramfile.h"
 #include "console/console.h"
 #include "service/service_correctly_filed.h"
-#include "service/service_nonogramme_valid.h"
+#include "service/service_nonogram_valid.h"
 
 int main(void) {
 	Nonogram *nonogram = loadNonogramFromFile("../doc/4.nono");

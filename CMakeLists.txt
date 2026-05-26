@@ -15,10 +15,10 @@ add_executable(nonogramme main.c
 
         service/service_correctly_filed.c
         service/service_correctly_filed.h
-        service/service_nonogramme_valid.c
-        service/service_nonogramme_valid.h
-        service/nonogramme_solve.h
-        service/nonogramme_solve.c
+        service/service_nonogram_valid.c
+        service/service_nonogram_valid.h
+        service/service_nonogram_solve.h
+        service/service_nonogram_solve.c
         service/solve_int.h
         service/solve_int.c
 
