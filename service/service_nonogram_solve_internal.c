@@ -2,21 +2,23 @@
 
 #include <stdlib.h>
 
+typedef unsigned char uchar;
+
 GridSolver createGridSolver(const unsigned char width,
                             const unsigned char height) {
   GridSolver val = malloc(sizeof(VerifiedPixel *));
-  for (int i = 0; i < height; i++) {
+  for (uchar i = 0; i < height; i++) {
     val[i] = malloc(width * sizeof(VerifiedPixel *));
-    for (int j = 0; j < width; j++)
+    for (uchar j = 0; j < width; j++)
       val[i][j] = UNKNOWN;
   }
   return val;
 }
 
 void deleteGridSolver(GridSolver solver, const unsigned char height) {
-  if (!solver)
+  if (solver == NULL)
     return;
-  for (int i = 0; i < height; i++)
+  for (uchar i = 0; i < height; i++)
     free(solver[i]);
   free(solver);
 }
