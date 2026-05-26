@@ -1,0 +1,4 @@
+#ifndef __NONOGRAMME_SOLVE_H
+#define __NONOGRAMME_SOLVE_H
+
+#endif // __NONOGRAMME_SOLVE_H
