@@ -10,8 +10,10 @@
 
 unsigned char isNonogramAllRowsCorrectlyFilled(const Nonogram *nonogram);
 unsigned char isNonogramAllColumnsCorrectlyFilled(const Nonogram *nonogram);
-unsigned char isNonogramRowCorrectlyFilled(const Nonogram *nonogram, unsigned char index);
-unsigned char isNonogramColumnCorrectlyFilled(const Nonogram *nonogram, unsigned char index);
+unsigned char isNonogramRowCorrectlyFilled(const Nonogram *nonogram,
+                                           unsigned char index);
+unsigned char isNonogramColumnCorrectlyFilled(const Nonogram *nonogram,
+                                              unsigned char index);
 char isNonogramCorrectlyFilled(const Nonogram *nonogram);
 
-#endif //NONOGRAMME_NONOGRAMME_SERVICE_CORRECTLY_FILLED_H
+#endif // NONOGRAMME_NONOGRAMME_SERVICE_CORRECTLY_FILLED_H
