@@ -25,7 +25,7 @@ void fillAllVerifiableColumns(GridSolver solver, const unsigned char width,
 void fillAllVerifiableRow(GridSolver solver, const unsigned char width,
                           const unsigned char rowIndex);
 
-void fillAllVerifiableCol(GridSolver solver, const unsigned char colIndex,
+void fillAllVerifiableColumn(GridSolver solver, const unsigned char colIndex,
                           const unsigned char height);
 
 #endif // __SOLVE_INT_H

@@ -30,7 +30,7 @@ void fillAllVerifiableRow(GridSolver solver, const unsigned char width,
   return;
 }
 
-void fillAllVerifiableCol(GridSolver solver, const unsigned char colIndex,
+void fillAllVerifiableColumn(GridSolver solver, const unsigned char colIndex,
                           const unsigned char height) {
   return;
 }
