@@ -13,6 +13,9 @@ GridSolver createGridSolver(const unsigned char width,
 void deleteGridSolver(GridSolver solver, const unsigned char width,
                       const unsigned char height);
 
+void fillAllVerifiables(GridSolver solver, const unsigned char width,
+                        const unsigned char height);
+
 void fillAllVerifiableRows(GridSolver solver, const unsigned char width,
                            const unsigned char height);
 

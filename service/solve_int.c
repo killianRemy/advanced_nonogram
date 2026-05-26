@@ -10,6 +10,11 @@ void deleteGridSolver(GridSolver solver, const unsigned char width,
   return;
 }
 
+void fillAllVerifiables(GridSolver solver, const unsigned char width,
+                        const unsigned char height) {
+  return;
+}
+
 void fillAllVerifiableRows(GridSolver solver, const unsigned char width,
                            const unsigned char height) {
   return;
