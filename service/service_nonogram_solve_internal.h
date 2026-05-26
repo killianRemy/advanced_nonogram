@@ -10,8 +10,7 @@ typedef VerifiedPixel **GridSolver;
 GridSolver createGridSolver(const unsigned char width,
                             const unsigned char height);
 
-void deleteGridSolver(GridSolver solver, const unsigned char width,
-                      const unsigned char height);
+void deleteGridSolver(GridSolver solver, const unsigned char height);
 
 void fillAllVerifiables(GridSolver solver, const unsigned char width,
                         const unsigned char height);

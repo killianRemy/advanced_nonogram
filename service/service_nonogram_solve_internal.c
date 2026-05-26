@@ -1,13 +1,24 @@
 #include "service_nonogram_solve_internal.h"
 
+#include <stdlib.h>
+
 GridSolver createGridSolver(const unsigned char width,
                             const unsigned char height) {
-  return 0;
+  GridSolver val = malloc(sizeof(VerifiedPixel *));
+  for (int i = 0; i < height; i++) {
+    val[i] = malloc(width * sizeof(VerifiedPixel *));
+    for (int j = 0; j < width; j++)
+      val[i][j] = UNKNOWN;
+  }
+  return val;
 }
 
-void deleteGridSolver(GridSolver solver, const unsigned char width,
-                      const unsigned char height) {
-  return;
+void deleteGridSolver(GridSolver solver, const unsigned char height) {
+  if (!solver)
+    return;
+  for (int i = 0; i < height; i++)
+    free(solver[i]);
+  free(solver);
 }
 
 void fillAllVerifiables(GridSolver solver, const unsigned char width,
