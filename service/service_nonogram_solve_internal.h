@@ -18,12 +18,14 @@ void fillAllVerifiables(GridSolver solver, const unsigned char width,
 
 void fillAllVerifiableRows(GridSolver solver, const unsigned char width,
                            const unsigned char height);
+//TODO here
 
 void fillAllVerifiableColumns(GridSolver solver, const unsigned char width,
                               const unsigned char height);
 
 void fillAllVerifiableRow(GridSolver solver, const unsigned char width,
                           const unsigned char rowIndex);
+//TODO here too
 
 void fillAllVerifiableCol(GridSolver solver, const unsigned char colIndex,
                           const unsigned char height);
