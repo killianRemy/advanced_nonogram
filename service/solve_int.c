@@ -5,7 +5,10 @@ GridSolver createGridSolver(const unsigned char width,
   return 0;
 }
 
-void deleteGridSolver(GridSolver solver) { return; }
+void deleteGridSolver(GridSolver solver, const unsigned char width,
+                      const unsigned char height) {
+  return;
+}
 
 void fillAllVerifiableRows(GridSolver solver, const unsigned char width,
                            const unsigned char height) {
