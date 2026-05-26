@@ -12,9 +12,10 @@ int main(void) {
 
     printf("\n\n");
 
-    for (unsigned char i = 0; i < nonogramGetHeight(nonogram);i++) {
-        printf("%d\n", isNonogramRowCorrectlyFilled(nonogram, i));
+    for (unsigned char i = 0; i < nonogramGetHeight(nonogram); i++) {
+        printf("%d\n", isNonogramRowCorrectlyFilled(nonogram, 0));
     }
+
 
     deleteNonogram(nonogram);
 
