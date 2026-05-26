@@ -28,4 +28,7 @@ void fillAllVerifiableRow(GridSolver solver, const unsigned char width,
 void fillAllVerifiableCol(GridSolver solver, const unsigned char colIndex,
                           const unsigned char height);
 
+unsigned char sumOFALlConstrainsPlusEmptyEqualsSize(unsigned char *constraints, unsigned char constraintsSize,
+                                                    unsigned char size);
+
 #endif // __SOLVE_INT_H

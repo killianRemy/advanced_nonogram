@@ -6,21 +6,26 @@
 #include "service/service_nonogram_valid.h"
 
 int main(void) {
-	Nonogram *nonogram = loadNonogramFromFile("../doc/4.nono");
+	Nonogram *nonogram = loadNonogramFromFile("../doc/6-empty.nono");
 
 	displayNonogramWithConstraints(nonogram);
 	// displayNonogram(nonogram);
 
-	printf("%d\n", isNonogramBlackRowsEqualsBlackColumn(nonogram));
+	Constraint* constraints=nonogramColumnsConstraintsToArray(nonogram, 4);
+	unsigned char constraintSize=nonogramColumnsConstraintsGetSize(nonogram,4);
+	unsigned char height=nonogramGetHeight(nonogram);
 
-	printf("%d\n", isNonogramEachConstraintsLessOrEqualsThanDimension(nonogram));
+	printf("%d\n",constraintSize);
 
-	printf("%d\n", isNonogramAllConstraintsContainsOneZeroOrNone(nonogram));
+	printf("%d\n",height);
 
-	printf("%d\n", isNonogramRowCorrectlyFilled(nonogram, 10));
-	printf("%d\n", isNonogramAllRowsCorrectlyFilled(nonogram));
+	for (unsigned char i=0;i<constraintSize;i++) {
+		printf("-%d",constraints[i]);
+	}
 
-	printf("%d\n", isNonogramCorrectlyFilled(nonogram));
+
+	printf("\n%d", sumOFALlConstrainsPlusEmptyEqualsSize(constraints,constraintSize,height));
+
 
 	deleteNonogram(nonogram);
 
