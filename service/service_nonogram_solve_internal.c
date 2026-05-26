@@ -1,4 +1,4 @@
-#include "solve_int.h"
+#include "service_nonogram_solve_internal.h"
 
 GridSolver createGridSolver(const unsigned char width,
                             const unsigned char height) {
