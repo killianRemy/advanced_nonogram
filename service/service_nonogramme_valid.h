@@ -14,4 +14,6 @@ isNonogramEachConstraintsLessOrEqualsThanDimension(const Nonogram *nonogram);
 unsigned char
 isNonogramAllConstraintsContainsOneZeroOrNone(const Nonogram *nonogram);
 
+unsigned char isNonogramValid(const Nonogram *nonogram);
+
 #endif // NONOGRAMME_NONOGRAMME_SERVICE_VALID_H

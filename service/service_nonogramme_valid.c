@@ -125,3 +125,5 @@ isNonogramAllConstraintsContainsOneZeroOrNone(const Nonogram *nonogram) {
 
   return 1;
 }
+
+unsigned char isNonogramValid(const Nonogram *nonogram) { return 0; }
